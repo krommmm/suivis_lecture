@@ -1,0 +1,60 @@
+.choixMenu {
+    display: flex;
+    padding: 15px;
+
+    justify-content: center;
+}
+
+.choixMenu__container {
+    display: flex;
+    width: 80%;
+}
+
+.choixMenu__container p {
+    width: 200px;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choixMenu__container .selected {
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+}
+
+
+.bookStatus {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.bookStatus__container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.bookStatus__container--status img {
+    width: 30px;
+}
+
+.bookStatus__container--status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 150px;
+}
+
+.status--selected {
+    border-bottom: 2px solid black;
+    padding-bottom: 15px;
+    font-weight:600;
+}
+
+.bookStatus__container--status i,
+.bookStatus__container--status img {
+    margin-right: 10px;
+}

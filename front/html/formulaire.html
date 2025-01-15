@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+    <script src="https://kit.fontawesome.com/65211b898e.js" crossorigin="anonymous"></script>
+    <title>Secured-web-site - Formulaire</title>
+</head>
+
+<body class="bgBase">
+    <header>
+        <div class="headerContainer">
+            <a href="../index.html">
+                <div class="headerContainer__logo">Suivis Lecture</div>
+            </a>
+            <div class="headerContainer__searchBar">
+                <select id="headerContainer__searchBar--option" name="typeLivre">
+                    <option value="livres">Livres</option>
+                    <option value="BD">BD</option>
+                    <option value="Comics">Comics</option>
+                    <option value="Manga">Manga</option>
+                </select>
+                <div class="headerContainer__searchBar__container">
+                    <form id="header-searchBar">
+                        <input type="text" class="headerContainer__searchBar__container--searchBar" name="searchBar"
+                            placeholder="Rechercher un titre, un auteur, un thème ..." />
+                    </form>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="headerContainer__profil">
+                <img class="headerContainer__profil--img" src="../assets/pictures/others/user_blue.png" />
+                <div class="headerContainer__profil__menu">
+                    <div class="headerContainer__profil__menu__header"><i
+                            class="fa-solid fa-circle-xmark exitProfilMenu"></i></div>
+                    <div class="headerContainer__profil__menu__body"><img
+                            src="../assets/pictures/others/user_blue.png" /> Profile</div>
+                    <div class="headerContainer__profil__menu__footer">
+                        <a href="../html/formulaire.html">
+                            <div class="btnProfil btnProfil--black">Connection</div>
+                        </a>
+                        <div class="btnProfil btnProfil--red">Déconnexion</div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerContainer__statistiques">
+                <div class="headerContainer__statistiques--btn btn-header">Graphiques</div>
+            </div>
+            <div class="headerContainer__social">
+                <div class="headerContainer__social--btn btn-header-black">Social</div>
+
+            </div>
+        </div>
+    </header>
+    <div class="formulairePage">
+        <section class="formulaire box">
+            <!-- <img class="logo" src="../assets/pictures/logo/poitiers.jpg" /> -->
+            <div class="formulaire__main"><!--Formulaire inscription & connection--></div>
+        </section>
+    </div>
+    <script type="module" src="../js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.categories{
+    border-top:1px solid rgba(0,0,0,.1);
+    border-bottom:1px solid rgba(0,0,0,.1);
+    padding: 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.categories__container{
+    width: 80%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.categories__container>div{
+    cursor:pointer;
+}

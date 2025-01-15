@@ -1,0 +1,46 @@
+.books {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.books__container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.books__container__sheet {
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+}
+
+.books__container__sheet__header {
+    width: 100%;
+}
+
+.books__container__sheet__header img {
+    width: 200px;
+    height: 330px;
+    object-fit:cover;
+}
+
+.books__container__sheet__main--title {
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.books__container__sheet__main {
+    display: flex;
+}
+
+.books__container__sheet__footer--author {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}

@@ -1,0 +1,42 @@
+.pagination {
+    margin: 50px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination__container {
+    display: flex;
+}
+
+.pagination__container--square {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.pagination__container--tempo {
+    width: 50px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination__container--square:hover {
+    background-color: #e7e6e3;
+}
+
+.pageSelected {
+    background-color: #c4c2bc;
+}
+
+.panination__container--numeros {
+    display: flex;
+}

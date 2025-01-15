@@ -1,0 +1,75 @@
+@font-face {
+    font-family: speeday;
+    src: url("../fonts/Speeday-Regular-FFP.ttf");
+}
+
+.bgBase {
+    background-color: rgba(254, 251, 240);
+}
+
+.bgLight {
+    background-color: rgb(22, 22, 22);
+}
+
+.bglighter {
+    background-color: rgb(12, 45, 50);
+}
+
+* {
+    font-family: system-ui;
+}
+
+
+
+.gris {
+    color: rgb(55, 55, 67);
+}
+
+.btn {
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+    /* background-color: #026DF9; */
+    background-color: rgb(217, 49, 36);
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-header {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.btn-header-black {
+    background-color: rgb(52, 50, 48);
+    color:white;
+    border-radius: 5px;
+    padding: 9px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.box {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: relative;
+}

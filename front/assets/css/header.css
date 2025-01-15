@@ -1,0 +1,146 @@
+header {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.headerContainer {
+    display: flex;
+    width: 80%;
+}
+
+header .headerContainer .headerContainer__logo {
+    display: flex;
+    align-items: center;
+    font-family: speeday;
+    font-size: 25px;
+    min-width: 291px;
+}
+
+header .headerContainer .headerContainer__searchBar {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .headerContainer .headerContainer__searchBar #headerContainer__searchBar--option {
+    padding: 9px;
+    border: none;
+    background-color: rgb(240, 239, 231);
+    font-weight: 600;
+}
+
+.headerContainer__searchBar__container {
+    width: 80%;
+    position: relative;
+}
+
+.headerContainer__searchBar__container i {
+    position: absolute;
+    top: 10px;
+    left: 11px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+header .headerContainer .headerContainer__searchBar input {
+    width: 100%;
+    padding: 9px;
+    border: none;
+    background-color: rgb(240, 239, 231);
+    padding-left: 41px;
+    font-weight: 600;
+}
+
+header .headerContainer .headerContainer__profil {
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.headerContainer__profil__menu {
+    position: absolute;
+    top: 47px;
+    left: -80px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 3px;
+}
+
+.headerContainer__profil__menu__header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+}
+.headerContainer__profil__menu__header i{
+    color:red;
+    font-size:25px;
+}
+
+.headerContainer__profil__menu__body {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.headerContainer__profil__menu__body img {
+    margin-right: 10px;
+}
+
+.headerContainer__profil__menu__footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.btnProfil {
+    border-radius: 0;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.btnProfil--black {
+    background-color: black;
+    color: white;
+    font-weight: 600;
+}
+
+.btnProfil--red {
+    background-color: #d10024;;
+    color: white;
+    font-weight: 600;
+}
+
+header .headerContainer .headerContainer__profil img {
+    width: 34px;
+}
+
+header .headerContainer .headerContainer__chat {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+
+header .headerContainer .headerContainer__statistiques,
+header .headerContainer .headerContainer__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px 0px 5px;
+    cursor: pointer;
+}
+
+header .headerContainer .headerContainer__social .headerContainer__social--btn {}

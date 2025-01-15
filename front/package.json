@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "front",
+  "version": "1.0.0",
+  "description": "app securité web",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --run --reporter verbose --globals"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdom": "^26.0.0",
+    "vitest": "^2.1.8"
+  }
+}
