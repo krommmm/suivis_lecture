@@ -1,3 +1,4 @@
+
 export class CtrlHeader {
     constructor(uiStyle, uiBooks, booksApi) {
         this.uiStyle = uiStyle;
@@ -36,7 +37,9 @@ export class CtrlHeader {
     handlePage(researchedValue){
         const page = document.querySelector(".books__container");
         if(!page){
-            window.location.href=`/front/index.html?q=${researchedValue}`;
+            window.location.href=`/front/index.html?q=${researchedValue}&page=1`;
+        }else{
+            window.location.href=`/front/index.html?q=${researchedValue}&page=1`;
         }
     }
 

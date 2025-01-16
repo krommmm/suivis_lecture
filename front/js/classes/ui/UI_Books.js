@@ -10,38 +10,7 @@ export class UI_Books {
             this.createBookSheet(item, this.booksContainer);
         });
         this.displayBookLength(books);
-       // this.displayPagination(books);
     }
-
-    // displayPagination(books) {
-    //     const booksLength = books.totalItems;
-    //     const nbPages = Math.round(booksLength / 40);
-    //     const paginationContainerNum = document.querySelector(".panination__container--numeros");
-    //     // creer max 10 + dernier(11ème) + < & > 
-    //     paginationContainerNum.innerHTML = "";
-
-    //     for (let i = 0; i < 11; i++) {
-    //         let page = i + 1;
-    //         const a = document.createElement("a");
-    //         const square = document.createElement("div");
-    //         square.className = "pagination__container--square";
-
-    //         if (i == 10) {
-    //             square.textContent = nbPages;
-    //             square.setAttribute("data-id", nbPages);
-    //             page = nbPages;
-    //         } else if (i == 9) {
-    //             square.textContent = "...";
-    //             square.className="pagination__container--tempo";
-    //         } else {
-    //             square.textContent = i + 1;
-    //             square.setAttribute("data-id", i);
-    //         }
-    //         a.setAttribute("href", `http://127.0.0.1:5500/front/index.html?q=fantastique&page=${page}`);
-    //         a.appendChild(square);
-    //         paginationContainerNum.appendChild(a);
-    //     };
-    // }
 
     displayBookLength(books) {
         const bookLength = books.totalItems;
@@ -52,6 +21,7 @@ export class UI_Books {
     createBookSheet(book, elementContainer) {
         const bookSheet = document.createElement("div");
         bookSheet.className = "books__container__sheet";
+        bookSheet.setAttribute("data-id", book.id);
 
         // head
         const bookSheetHead = document.createElement("div");

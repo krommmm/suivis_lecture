@@ -1,11 +1,38 @@
 export class Md_Pagination {
-    constructor(totalItems, currentPage = 1, itemsPerPage = 40) {
-        this.totalItems = totalItems;
-        this.itemsPerPage = itemsPerPage;
-        this.currentPage = currentPage;
-        this.totalPages = Math.ceil(totalItems / itemsPerPage);
+    constructor() {
+        this.totalItems = 0;
+        this.itemsPerPage = 40;
+        this.currentPage = 1;
+        this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
     }
 
+    getCurrentPage() {
+        return this.currentPage;
+    }
+
+    setPreviousPage() {
+        if (this.currentPage > 1) {
+            this.currentPage--;
+        }
+    }
+    setNextPage(){
+        if(this.currentPage < this.totalPages){
+            this.currentPage++;
+        }
+    }
+
+    setNewVariables(totalItems, itemsPerPage, currentPage) {
+        this.totalItems = totalItems;
+        this.itemsPerpage = itemsPerPage;
+        this.currentPage = currentPage;
+        this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+    }
+
+    getNextPage() {
+        if (this.currentPage < (Math.ceil(this.totalItems / this.itemsPerPage))) {
+            this.currentPage++;
+        }
+    }
 
     getPageRange(rangeSize = 8) {
 
@@ -23,13 +50,10 @@ export class Md_Pagination {
         }
 
         const rangeArr = [];
+
         for (let i = start; i < end + 1; i++) {
             rangeArr.push(i);
         }
-
-        // cases des extrêmes
-        // check si start = 1 et end = totalPages
-
         if (start !== 1) {
             // creation de : 1 ...
             rangeArr.unshift(1);
@@ -47,5 +71,5 @@ export class Md_Pagination {
 
 
 
-   
+
 }
