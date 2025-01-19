@@ -8,6 +8,8 @@ import { BooksApi } from "./classes/services/BooksApi.js";
 import { UI_Books } from "./classes/ui/UI_Books.js";
 import { Md_Pagination } from "./classes/models/Md_Pagination.js";
 import { UI_Pagination } from "./classes/ui/UI_Pagination.js";
+import { CtrlFocus } from "./classes/controllers/CtrlFocus.js";
+import { UI_Focus } from "./classes/ui/UI_Focus.js";
 
 const uiForm = new UI_Formulaire();
 const mdForm = new Md_Formulaire();
@@ -17,15 +19,29 @@ const booksApi = new BooksApi();
 const ctrlHeader = new CtrlHeader(uiStyle, uiBooks, booksApi);
 const mdPagination = new Md_Pagination();
 const uiPagination = new UI_Pagination();
+const uiFocus = new UI_Focus();
 
 
 const url = window.location.href;
 const urlPageArr = url.split("/");
-const pageName = urlPageArr[urlPageArr.length - 1].replace(".html", "");
+let pageName = urlPageArr[urlPageArr.length - 1].replace(".html", "");
+
+function clean(string) {
+    const cleanHtml = string.replace(".html", "");
+    const cleanParams = cleanHtml.split("?")[0];
+    return cleanParams;
+}
+
+pageName = clean(pageName);
+
 
 switch (pageName) {
     case "index":
         new CtrlHome(uiStyle, ctrlHeader, uiBooks, booksApi, mdPagination, uiPagination);
+        break;
+
+    case "focus":
+        new CtrlFocus(ctrlHeader, booksApi, uiFocus);
         break;
 
     case "formulaire":

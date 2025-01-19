@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/index.css" />
+    <link rel="icon" type="image/x-icon" href="./assets/pictures/logo/favicon.ico" />
+    <script src="https://kit.fontawesome.com/65211b898e.js" crossorigin="anonymous"></script>
+    <title>Suivis-lecture - Accueil</title>
+</head>
+
+<body class="bgBase">
+    <header>
+        <div class="headerContainer">
+            <a href="../index.html">
+                <div class="headerContainer__logo">Suivis Lecture</div>
+            </a>
+            <div class="headerContainer__searchBar">
+                <select id="headerContainer__searchBar--option" name="typeLivre">
+                    <option value="livres">Livres</option>
+                    <option value="BD">BD</option>
+                    <option value="Comics">Comics</option>
+                    <option value="Manga">Manga</option>
+                </select>
+                <div class="headerContainer__searchBar__container">
+                    <form id="header-searchBar">
+                        <input type="text" class="headerContainer__searchBar__container--searchBar" name="searchBar"
+                            placeholder="Rechercher un titre, un auteur, un thème ..." />
+                    </form>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="headerContainer__profil">
+                <img class="headerContainer__profil--img" src="../assets/pictures/others/user_blue.png" />
+                <div class="headerContainer__profil__menu">
+                    <div class="headerContainer__profil__menu__header"><i
+                            class="fa-solid fa-circle-xmark exitProfilMenu"></i></div>
+                    <div class="headerContainer__profil__menu__body"><img
+                            src="../assets/pictures/others/user_blue.png" /> Profile</div>
+                    <div class="headerContainer__profil__menu__footer">
+                        <a href="../html/formulaire.html">
+                            <div class="btnProfil btnProfil--black">Connection</div>
+                        </a>
+                        <div class="btnProfil btnProfil--red">Déconnexion</div>
+                    </div>
+                </div>
+            </div>
+            <div class="headerContainer__statistiques">
+                <div class="headerContainer__statistiques--btn btn-header">Graphiques</div>
+            </div>
+            <div class="headerContainer__social">
+                <div class="headerContainer__social--btn btn-header-black">Social</div>
+
+            </div>
+        </div>
+    </header>
+    <div class="categories">
+        <div class="categories__container">
+            <div class="categories__container--fantastique">Fantastique</div>
+            <div class="categories__container--sf">SF</div>
+            <div class="categories__container--policier">Policier/thriller</div>
+            <div class="categories__container--Romance">Romance</div>
+            <div class="categories__container--policier">Historique</div>
+            <div class="categories__container--jeunesse">Jeunesse</div>
+            <div class="categories__container--classiques">Classiques</div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="filter__container">
+            <div class="filter__container__bookLength"></div>
+            <div class="filter__container__search"><i class="fa-solid fa-filter"></i>Filter</div>
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <main class="focus">
+        <div class="focus__container">
+            <!-- faire la page focus en statique pour commencer -->
+            <div class="focus__container__header">
+                <div class="focus__container__header__img"></div>
+                <div class="focus__container__header__presentation">
+                    <div class="focus__container__header__presentation__principal">
+                        <p class="focus__container__header__presentation__principal--title"></p>
+                        <p class="focus__container__header__presentation__principal--author"></p>
+                    </div>
+                    <div class="focus__container__header__presentation__tags"></div>
+                    <div class="focus__container__header__presentation__description">
+                        <p class="focus__container__header__presentation__description"></p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="focus__barre"></div>
+
+            <div class="focus__container__footer"></div>
+        </div>
+
+    </main>
+
+
+    <footer></footer>
+    <script type="module" src="../js/index.js"></script>
+</body>
+
+</html>

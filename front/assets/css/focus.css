@@ -1,0 +1,54 @@
+.focus {
+    background-color: rgb(242, 239, 230);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.focus__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 25px;
+    background-color: rgba(254, 251, 240);
+    height: fit-content;
+    border-radius: 7px;
+    margin-top: 50px;
+}
+
+.focus__container__header {
+    display: flex;
+}
+
+.focus__container__header__img img {
+    width: 260px;
+    height: 430px;
+}
+
+.focus__container__header__presentation {
+    margin-left: 15px;
+}
+
+.focus__barre {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.focus__container__header__presentation__principal--title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.focus__container__header__presentation__principal--auteur {
+    color: rgb(153, 153, 152);
+    margin: 15px 0px 15px 0px;
+}
+
+.focus__container__header__presentation__tags--tag {
+    margin: 8px 0px 8px 0px;
+}
+
+.focus__container__header__presentation__description--resume {
+    margin: 17px 0px 0px 0px;
+    font-size: 17px;
+    font-weight: 600;
+}

@@ -19,6 +19,9 @@ export class UI_Books {
     }
 
     createBookSheet(book, elementContainer) {
+        const aContainer = document.createElement("a");
+        aContainer.href=`http://127.0.0.1:5500/front/html/focus.html?bookid=${book.id}`;
+
         const bookSheet = document.createElement("div");
         bookSheet.className = "books__container__sheet";
         bookSheet.setAttribute("data-id", book.id);
@@ -62,6 +65,7 @@ export class UI_Books {
         bookSheetFooter.appendChild(bookSheetFooterAuthor);
         bookSheet.appendChild(bookSheetFooter);
 
-        elementContainer.appendChild(bookSheet);
+        aContainer.appendChild(bookSheet);
+        elementContainer.appendChild(aContainer);
     }
 }

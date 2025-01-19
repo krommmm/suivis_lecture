@@ -14,4 +14,15 @@ export class BooksApi {
             return err;
         }
     }
+
+    async getBook(bookId) {
+        const url = `https://www.googleapis.com/books/v1/volumes/${bookId}`;
+        try {
+            const preRes = await fetch(url);
+            const res = await preRes.json();
+            return res;
+        } catch (err) {
+            return err;
+        }
+    }
 } 
