@@ -4,12 +4,11 @@ export class UI_Focus {
     }
 
     displayBook(book) {
-        console.log(book);
-
         //img
         const imgContainer = document.querySelector(".focus__container__header__img");
         const img = document.createElement("img");
-        img.src = book.volumeInfo.imageLinks.thumbnail;
+        img.src = `https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w260-h430&source=gbs_api`;
+        
         imgContainer.appendChild(img);
 
         const presentation = document.querySelector(".focus__container__header__presentation__principal");

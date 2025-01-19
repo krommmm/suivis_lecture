@@ -1,3 +1,5 @@
+import { BooksApi } from "../services/BooksApi.js";
+
 export class UI_Books {
     constructor() {
         this.booksContainer = document.querySelector(".books__container");
@@ -12,13 +14,14 @@ export class UI_Books {
         this.displayBookLength(books);
     }
 
-    displayBookLength(books) {
+    async displayBookLength(books) {
         const bookLength = books.totalItems;
         const $bookLengthEl = document.querySelector(".filter__container__bookLength");
         $bookLengthEl.textContent = `${bookLength} livres`;
     }
+    //https://books.google.com/books/publisher/content/images/frontcover/\(bookImgId)?fife=w400-h600&source=gbs_api 
 
-    createBookSheet(book, elementContainer) {
+    async createBookSheet(book, elementContainer) {
         const aContainer = document.createElement("a");
         aContainer.href=`http://127.0.0.1:5500/front/html/focus.html?bookid=${book.id}`;
 
@@ -29,9 +32,15 @@ export class UI_Books {
         // head
         const bookSheetHead = document.createElement("div");
         bookSheetHead.className = "books__container__sheet__header";
+
+        // // recup img:
+        // const booksApi = new BooksApi();
+        // const bookImg = await booksApi.getImg(book.id);
+        // console.log(bookImg);        
+
         const img = document.createElement("img");
         if (book.volumeInfo.imageLinks) {
-            img.src = `${book.volumeInfo.imageLinks.thumbnail}`;
+            img.src = `https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w200-h330&source=gbs_api`;
         } else {
             img.src = "/front/assets/pictures/exSheet/noImgBook.jpg";
         }
