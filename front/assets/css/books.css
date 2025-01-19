@@ -23,7 +23,6 @@
 .books__container__sheet__header img {
     width: 200px;
     height: 330px;
-    object-fit:cover;
 }
 
 .books__container__sheet__main--title {

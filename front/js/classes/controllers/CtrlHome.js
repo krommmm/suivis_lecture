@@ -70,10 +70,32 @@ export class CtrlHome {
         }
     }
 
-    displayPagination(query) {
+    async calculateRealTotalItems(query) {
+        let startIndex = 0;
+        let totalItems = 0;
+
+        let books = await this.booksApi.getBooks(startIndex, 40, query);
+
+        while (books.items) {
+            startIndex += 40;
+            totalItems = books.totalItems;
+            books = await this.booksApi.getBooks(startIndex, 40, query);
+        }
+        while(!books.items){
+            startIndex -= 1;
+            totalItems = books.totalItems;
+            books = await this.booksApi.getBooks(startIndex, 40, query);
+        }
+        return totalItems;
+    }
+
+    async displayPagination(query) {
+        // totalItems almost each seconds so it's impossible to determinate the real number of totalItems and the last page
+       // const totalItems = await this.calculateRealTotalItems(query);
+
         const totalItems = this.books.totalItems;
         const currentPage = this.getCurrentpage();
-        this.mdPagination.setNewVariables(totalItems, 40, currentPage);
+        this.mdPagination.setNewVariables(totalItems, 40, currentPage);  
         const pageRange = this.mdPagination.getPageRange();
         try {
             this.uiPagination.displayPagination(pageRange, currentPage, query);

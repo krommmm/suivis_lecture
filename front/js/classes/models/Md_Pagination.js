@@ -21,11 +21,12 @@ export class Md_Pagination {
         }
     }
 
-    setNewVariables(totalItems, itemsPerPage, currentPage) {
+    setNewVariables(totalItems, itemsPerPage, currentPage) { 
         this.totalItems = totalItems;
         this.itemsPerpage = itemsPerPage;
         this.currentPage = currentPage;
         this.totalPages = Math.ceil(this.totalItems / this.itemsPerPage);
+
     }
 
     getNextPage() {

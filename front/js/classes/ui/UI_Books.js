@@ -33,11 +33,7 @@ export class UI_Books {
         const bookSheetHead = document.createElement("div");
         bookSheetHead.className = "books__container__sheet__header";
 
-        // // recup img:
-        // const booksApi = new BooksApi();
-        // const bookImg = await booksApi.getImg(book.id);
-        // console.log(bookImg);        
-
+      
         const img = document.createElement("img");
         if (book.volumeInfo.imageLinks) {
             img.src = `https://books.google.com/books/publisher/content/images/frontcover/${book.id}?fife=w200-h330&source=gbs_api`;
